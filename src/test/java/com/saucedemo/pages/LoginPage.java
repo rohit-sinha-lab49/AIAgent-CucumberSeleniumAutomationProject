@@ -47,7 +47,9 @@ public class LoginPage extends BasePage {
 
     public void assertErrorMessage(String expectedMessage) {
         String actual = getText(errorMessage);
-        assert actual.contains(expectedMessage)
-                : "Expected error '" + expectedMessage + "' but got '" + actual + "'";
+        if (!actual.contains(expectedMessage)) {
+            throw new AssertionError(
+                    "Expected error message to contain:\n  '" + expectedMessage + "'\nBut got:\n  '" + actual + "'");
+        }
     }
 }
