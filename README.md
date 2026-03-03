@@ -165,21 +165,23 @@ mvn test -Dcucumber.features="src/test/resources/features/checkout.feature"
 ### Generate & Open Report
 
 ```bash
-# Step 1: Run tests (generates raw results in target/allure-results)
-mvn test
+# Step 1: Run tests (use -Dmaven.test.failure.ignore=true so report generates even on failures)
+mvn clean test -Dmaven.test.failure.ignore=true
 
 # Step 2: Generate HTML report
 mvn allure:report
 
 # Step 3: Open in browser
-allure open target/site/allure-maven-plugin
+.allure/allure-2.29.0/bin/allure open target/site/allure-maven-plugin
 ```
 
-### Or run everything in one command:
+### Or run everything in one command using Make:
 
 ```bash
-mvn test allure:report && allure open target/site/allure-maven-plugin
+make all
 ```
+
+> ⚠️ **Important:** Always use `-Dmaven.test.failure.ignore=true` when running tests so that Maven does **not** stop on test failures — this ensures `mvn allure:report` can always run and include failure screenshots in the report.
 
 ### What's in the Report?
 
