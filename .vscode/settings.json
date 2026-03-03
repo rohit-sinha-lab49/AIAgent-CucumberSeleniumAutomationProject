@@ -1,0 +1,15 @@
+{
+  "cucumber.features": [
+    "src/test/resources/features/**/*.feature"
+  ],
+  "cucumber.glue": [
+    "src/test/java/com/saucedemo/steps/**/*.java",
+    "src/test/java/com/saucedemo/hooks/**/*.java"
+  ],
+  "java.project.sourcePaths": [
+    "src/test/java",
+    "src/test/resources"
+  ],
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "editor.formatOnSave": true
+}
