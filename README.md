@@ -118,8 +118,8 @@ selenium-cucumber-java/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/rohit-sinha-lab49/selenium-cucumber-java.git
-cd selenium-cucumber-java
+git clone https://github.com/rohit-sinha-lab49/AIAgent-CucumberSeleniumAutomationProject.git
+cd AIAgent-CucumberSeleniumAutomationProject
 ```
 
 ### 2️⃣ Install Dependencies
